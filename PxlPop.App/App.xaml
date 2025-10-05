@@ -10,5 +10,31 @@
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
+
+        <!--<ResourceDictionary>
+            --><!-- Stijl voor icon-knoppen --><!--
+            <Style x:Key="IconButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" 
+                    Value="{AppThemeBinding Light=White, Dark=#222}" />
+                <Setter Property="TextColor" 
+                    Value="{AppThemeBinding Light=Black, Dark=White}" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="10,6" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="ContentLayout" Value="Left,8" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            --><!-- Optioneel: Border-style voor dezelfde look --><!--
+            <Style x:Key="IconButtonBorderStyle" TargetType="Border">
+                <Setter Property="Stroke" 
+                    Value="{AppThemeBinding Light=LightGray, Dark=DimGray}" />
+                <Setter Property="StrokeShape" 
+                    Value="RoundRectangle 12" />
+                <Setter Property="Padding" Value="4" />
+            </Style>
+        </ResourceDictionary>-->
+
     </Application.Resources>
 </Application>

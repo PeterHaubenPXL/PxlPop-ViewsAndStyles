@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Labo4_PxlPop.MainPage"             
+             xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons"
+             Title="Pxlpop festival">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image 
+                Source="pxl_icon.png"
+                Aspect="AspectFit" 
+                HeightRequest="340" 
+                HorizontalOptions="Center"
+                Shadow="green 5 5"/>
+            <Border Stroke="LightGray" StrokeShape="RoundRectangle 12">
+                <Button 
+                    x:Name="lineUpButton"
+                    Text="Line-up "
+                    ImageSource="music_solid_white.svg"
+                    ContentLayout="Left,50"
+                    Margin="0,50,0,10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="340"/>
+            </Border>
+            <Border>
+                <Button 
+                    x:Name="infoButton"
+                    Text=" Info     "
+                    ImageSource="circle_info_solid_white.svg"
+                    ContentLayout="Left,70"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="340">
+                </Button>
+            </Border>
+            <Border>
+                <Button 
+                    x:Name="favoriteButton"
+                    Text="    Favorieten"
+                    ImageSource="heart_solid_white.svg"
+                    ContentLayout="Left,5"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="340">
+                </Button>
+            </Border>
+            <Border>
+                <Button 
+                    x:Name="ticketButton"
+                    Text="Tickets  "
+                    ImageSource="circle_user_solid_white.svg"
+                    ContentLayout="Left,50"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="340">
+                </Button>
+            </Border>
+            <Border>
+                <Button 
+                    x:Name="userButton"
+                    Text="Account"
+                    ImageSource="circle_user_solid_white.svg"
+                    ContentLayout="Left,50"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="340">
+                </Button>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

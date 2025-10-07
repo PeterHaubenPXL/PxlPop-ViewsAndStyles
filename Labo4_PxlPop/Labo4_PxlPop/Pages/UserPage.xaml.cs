@@ -1,8 +1,8 @@
 namespace Labo4_PxlPop.Pages;
 
-public partial class InfoPage : ContentPage
+public partial class UserPage : ContentPage
 {
-	public InfoPage()
+	public UserPage()
 	{
 		InitializeComponent();
 	}

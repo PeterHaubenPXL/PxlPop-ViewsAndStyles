@@ -1,4 +1,4 @@
-namespace PxlPop.App.Pages;
+namespace Labo4_PxlPop.Pages;
 
 public partial class OrderPage : ContentPage
 {

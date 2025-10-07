@@ -3,26 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Labo4_PxlPop.MainPage"             
              xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons"
-             Title="Pxlpop festival">
+             Shell.NavBarIsVisible="False">
 
     <ScrollView>
         <VerticalStackLayout>
+            <Label 
+                    Text="Pxlpop festival"
+                    TextColor="White"
+                    BackgroundColor="Black"
+                    HorizontalOptions="Start"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HeightRequest="60"
+                    WidthRequest="420"
+                    Padding="40, 16"
+                    Margin=" 0,0,0,20"/>
             <Image 
-                Source="pxl_icon.png"
-                Aspect="AspectFit" 
-                HeightRequest="340" 
-                HorizontalOptions="Center"
-                Shadow="green 5 5"/>
+                    Source="pxl_icon.png"
+                    Aspect="AspectFit" 
+                    HeightRequest="340" 
+                    HorizontalOptions="Center"
+                    Shadow="green 5 5"/>
             <Border Stroke="LightGray" StrokeShape="RoundRectangle 12">
                 <Button 
                     x:Name="lineUpButton"
                     Text="Line-up "
                     ImageSource="music_solid_white.svg"
                     ContentLayout="Left,50"
-                    Margin="0,50,0,10"
+                    Margin="0,40,0,10"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
-                    WidthRequest="340"/>
+                    WidthRequest="340" 
+                    Clicked="lineUpButton_Clicked"/>
             </Border>
             <Border>
                 <Button 
@@ -32,7 +44,8 @@
                     ContentLayout="Left,70"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
-                    WidthRequest="340">
+                    WidthRequest="340"
+                    Clicked="infoButton_Clicked">
                 </Button>
             </Border>
             <Border>
@@ -43,18 +56,20 @@
                     ContentLayout="Left,5"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
-                    WidthRequest="340">
+                    WidthRequest="340"
+                    Clicked="favoriteButton_Clicked">
                 </Button>
             </Border>
             <Border>
                 <Button 
-                    x:Name="ticketButton"
+                    x:Name="ticketsButton"
                     Text="Tickets  "
-                    ImageSource="circle_user_solid_white.svg"
+                    ImageSource="ticket_solid_white.svg"
                     ContentLayout="Left,50"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
-                    WidthRequest="340">
+                    WidthRequest="340"
+                    Clicked="ticketsButton_Clicked">
                 </Button>
             </Border>
             <Border>
@@ -65,7 +80,8 @@
                     ContentLayout="Left,50"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
-                    WidthRequest="340">
+                    WidthRequest="340"
+                    Clicked="userButton_Clicked">
                 </Button>
             </Border>
         </VerticalStackLayout>

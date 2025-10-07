@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Labo4_PxlPop.Pages.LineupPage" 
+             x:Class="Labo4_PxlPop.Pages.UserPage"
              xmlns:views="clr-namespace:Labo4_PxlPop.Views"
-             Title="Line up page"
+             Title="UserPage"
              Shell.NavBarIsVisible="False">
     <VerticalStackLayout Spacing="0">
-        <views:HeaderView Title="Line-up" />
+        <views:HeaderView Title="Account page" />
 
         <!-- Rest van je page inhoud -->
-        <Label Text="Hier komt je line-up content" 
-               VerticalOptions="Center" 
-               HorizontalOptions="Center"/>
+        <Label Text="Hier komt je account content" 
+       VerticalOptions="Center" 
+       HorizontalOptions="Center"/>
 
     </VerticalStackLayout>
 </ContentPage>

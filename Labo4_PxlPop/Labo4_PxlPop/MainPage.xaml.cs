@@ -1,4 +1,5 @@
-﻿using MauiIcons.Core;
+﻿using Labo4_PxlPop.Pages;
+using MauiIcons.Core;
 
 namespace Labo4_PxlPop
 {
@@ -10,16 +11,18 @@ namespace Labo4_PxlPop
 
             _ = new MauiIcon();
 
-            SetThemeImage(Application.Current.RequestedTheme);
+            //SetThemeImage(Application.Current.RequestedTheme);
 
-            Application.Current.RequestedThemeChanged += (s, e) =>
-            {
-                MainThread.BeginInvokeOnMainThread(() =>
-                {
-                    SetThemeImage(e.RequestedTheme);
-                });
-            };
+            //Application.Current.RequestedThemeChanged += (s, e) =>
+            //{
+            //    MainThread.BeginInvokeOnMainThread(() =>
+            //    {
+            //        SetThemeImage(e.RequestedTheme);
+            //    });
+            //};
         }
+
+        
 
         private void SetThemeImage(AppTheme theme)
         {
@@ -35,11 +38,37 @@ namespace Labo4_PxlPop
             infoButton.ImageSource = theme == AppTheme.Dark
                 ? "circle_info_solid_black.svg"
                 : "circle_info_solid_white.svg";
-            ticketButton.ImageSource = theme == AppTheme.Dark
+            ticketsButton.ImageSource = theme == AppTheme.Dark
                 ? "ticket_solid_black.svg"
                 : "ticket_solid_white.svg";
         }
 
+        private async void lineUpButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LineupPage());
+        }
+
+        private async void infoButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new InfoPage());
+        }
+
+        private async void favoriteButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FavoritePage());
+        }
+
+        private async void ticketsButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TicketPage());
+        }
+
+        private async void userButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UserPage());
+        }
+
+        
     }
 
 }

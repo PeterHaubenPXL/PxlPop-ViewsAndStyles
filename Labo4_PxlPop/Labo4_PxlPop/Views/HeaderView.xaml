@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Labo4_PxlPop.Views.HeaderView">
+
+    <Grid BackgroundColor="Black" HeightRequest="60" ColumnSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button
+            x:Name="BackButton"
+            Style="{StaticResource BackButtonStyle}"
+            ImageSource="arrow_left_solid_white.png"
+            Clicked="OnBackClicked"
+            WidthRequest="60"
+            HeightRequest="60"
+            Padding="15"
+            CornerRadius="0" />
+
+        <Label
+            Grid.Column="1"
+            x:Name="TitleLabel"
+            Text="Titel"
+            VerticalTextAlignment="Center"
+            TextColor="White"
+            FontSize="20"
+            FontAttributes="Bold"
+            Padding="10,0,0,0" />
+    </Grid>
+</ContentView>

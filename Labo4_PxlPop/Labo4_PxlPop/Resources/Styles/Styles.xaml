@@ -43,6 +43,14 @@
         <Setter Property="ContentLayout" Value="Left,30"/>
     </Style>
 
+    <Style x:Key="BackButtonStyle" TargetType="Button" BasedOn="{x:Null}">
+        <Setter Property="Background">
+            <SolidColorBrush Color="Black" />
+        </Setter>
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="CornerRadius" Value="0" />
+    </Style>
+
     <Style TargetType="CheckBox">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
         <Setter Property="MinimumHeightRequest" Value="44"/>

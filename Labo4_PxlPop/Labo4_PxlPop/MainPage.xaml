@@ -8,16 +8,16 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label 
-                    Text="Pxlpop festival"
+                    Text="Pxlpop Festival"
                     TextColor="White"
                     BackgroundColor="Black"
                     HorizontalOptions="Start"
-                    FontSize="20"
+                    FontSize="24"
                     FontAttributes="Bold"
                     HeightRequest="60"
                     WidthRequest="420"
-                    Padding="40, 16"
-                    Margin=" 0,0,0,20"/>
+                    Padding="40, 13"
+                    Margin=" 0,0,0,25"/>
             <Image 
                     Source="pxl_icon.png"
                     Aspect="AspectFit" 
@@ -30,7 +30,7 @@
                     Text="Line-up "
                     ImageSource="music_solid_white.svg"
                     ContentLayout="Left,50"
-                    Margin="0,40,0,10"
+                    Margin="0,35,0,10"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     WidthRequest="340" 
@@ -39,9 +39,9 @@
             <Border>
                 <Button 
                     x:Name="infoButton"
-                    Text=" Info     "
+                    Text="Info     "
                     ImageSource="circle_info_solid_white.svg"
-                    ContentLayout="Left,70"
+                    ContentLayout="Left,75"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     WidthRequest="340"

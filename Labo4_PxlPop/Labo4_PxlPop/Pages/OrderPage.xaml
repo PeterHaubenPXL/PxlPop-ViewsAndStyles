@@ -6,7 +6,7 @@
              Title="OrderPage"
              Shell.NavBarIsVisible="False">
     <VerticalStackLayout Spacing="0">
-        <views:HeaderView Title="Order page" />
+        <views:HeaderView Title="Order" />
 
         <!-- Rest van je page inhoud -->
         <Label Text="Hier komt je order content" 

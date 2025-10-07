@@ -5,13 +5,128 @@
              xmlns:views="clr-namespace:Labo4_PxlPop.Views"
              Title="InfoPage"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout Spacing="0">
-        <views:HeaderView Title="info page" />
-
-        <!-- Rest van je page inhoud -->
-        <Label Text="Hier komt je info content" 
-       VerticalOptions="Center" 
-       HorizontalOptions="Center"/>
-
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <views:HeaderView Title="Info" Grid.Row="0" />
+        
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout>
+                <Border>
+                    <VerticalStackLayout Spacing="0">
+                        <VerticalStackLayout>
+                            <Border 
+                                HeightRequest="40"
+                                WidthRequest="340"
+                                Margin="30,10">
+                                <HorizontalStackLayout>
+                                    <Image Source="car_solid_green.svg" 
+                                        Aspect="AspectFit"/>
+                                    <Label
+                                        Text="Parking"
+                                        TextColor="#58A518"
+                                        HorizontalOptions="Start"
+                                        FontSize="28"
+                                        FontAttributes="Bold"
+                                        VerticalOptions="Center"
+                                        Margin="20,0,0,0"/>
+                                </HorizontalStackLayout>
+                            </Border>
+                            <BoxView 
+                                HeightRequest="1"
+                                Color="#58A518"
+                                Margin="30,0"/>
+                            <!-- Meerdere lijnen tekst -->
+                            <Label
+                                Margin="30,10,30,30"
+                                FontSize="18"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                      Nulla facilisi. Vivamus eget nibh nec nunc malesuada sodales. 
+                                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                                      accusantium doloremque laudantium, totam rem aperiam." />
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+                <Border>
+                    <VerticalStackLayout Spacing="0">
+                        <VerticalStackLayout>
+                            <Border 
+                                HeightRequest="40"
+                                WidthRequest="340"
+                                Margin="30,10">
+                                <HorizontalStackLayout>
+                                    <Image Source="utensils_solid_green.svg" 
+                                        Aspect="AspectFit"/>
+                                    <Label
+                                        Text="Food"
+                                        TextColor="#58A518"
+                                        HorizontalOptions="Start"
+                                        FontSize="28"
+                                        FontAttributes="Bold"
+                                        VerticalOptions="Center"
+                                        Margin="20,0,0,0"/>
+                                </HorizontalStackLayout>
+                            </Border>
+                            <BoxView 
+                                HeightRequest="1"
+                                Color="#58A518"
+                                Margin="30,0"/>
+                            <!-- Meerdere lijnen tekst -->
+                            <Label
+                                Margin="30,10,30,30"
+                                FontSize="18"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                      Nulla facilisi. Vivamus eget nibh nec nunc malesuada sodales. 
+                                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                                      accusantium doloremque laudantium, totam rem aperiam." />
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+                <Border>
+                    <VerticalStackLayout Spacing="0">
+                        <VerticalStackLayout>
+                            <Border 
+                                HeightRequest="40"
+                                WidthRequest="340"
+                                Margin="30,10">
+                                <HorizontalStackLayout>
+                                    <Image Source="champagne_glasses_solid_green.svg" 
+                                        Aspect="AspectFit"/>
+                                    <Label
+                                        Text="Drinks"
+                                        TextColor="#58A518"
+                                        HorizontalOptions="Start"
+                                        FontSize="28"
+                                        FontAttributes="Bold"
+                                        VerticalOptions="Center"
+                                        Margin="20,0,0,0"/>
+                                </HorizontalStackLayout>
+                            </Border>
+                            <BoxView 
+                                HeightRequest="1"
+                                Color="#58A518"
+                                Margin="30,0"/>
+                            <!-- Meerdere lijnen tekst -->
+                            <Label
+                                Margin="30,10,30,30"
+                                FontSize="18"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                      Nulla facilisi. Vivamus eget nibh nec nunc malesuada sodales. 
+                                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                                      accusantium doloremque laudantium, totam rem aperiam." />
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>

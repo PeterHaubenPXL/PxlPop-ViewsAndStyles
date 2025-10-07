@@ -4,7 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Labo4_PxlPop.Views.HeaderView">
 
-    <Grid BackgroundColor="Black" HeightRequest="60" ColumnSpacing="0">
+    <Grid BackgroundColor="Black" 
+          HeightRequest="60" 
+          ColumnSpacing="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60" />
             <ColumnDefinition Width="*" />
@@ -17,7 +19,7 @@
             Clicked="OnBackClicked"
             WidthRequest="60"
             HeightRequest="60"
-            Padding="15"
+            Padding="20"
             CornerRadius="0" />
 
         <Label
@@ -26,8 +28,9 @@
             Text="Titel"
             VerticalTextAlignment="Center"
             TextColor="White"
-            FontSize="20"
+            FontSize="24"
             FontAttributes="Bold"
-            Padding="10,0,0,0" />
+            FontFamily="Helvetica"
+            Padding="30,0,0,0" />
     </Grid>
 </ContentView>

@@ -6,7 +6,7 @@
              Title="Accountpage"
              Shell.NavBarIsVisible="False">
     <VerticalStackLayout>
-        <views:HeaderView Title="Line-up" />
+        <views:HeaderView Title="Account" />
 
         <!-- Rest van je page inhoud -->
         <Label Text="Hier komt je Account content" 

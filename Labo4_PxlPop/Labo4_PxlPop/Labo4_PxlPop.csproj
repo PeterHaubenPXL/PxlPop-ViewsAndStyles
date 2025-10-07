@@ -68,10 +68,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Pages\FavouritePage.xaml.cs">
+	    <DependentUpon>FavouritePage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Pages\AccountPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\FavoritePage.xaml">
+	  <MauiXaml Update="Pages\FavouritePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\InfoPage.xaml">

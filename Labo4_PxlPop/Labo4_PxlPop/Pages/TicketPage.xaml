@@ -3,16 +3,225 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Labo4_PxlPop.Pages.TicketPage"
              xmlns:views="clr-namespace:Labo4_PxlPop.Views"
+             xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons"
              Title="TicketPage"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout Spacing="0">
-        <views:HeaderView Title="Tickets" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
 
-        <!-- Rest van je page inhoud -->
-        <Label 
-            Text="Hier komt je tickets content" 
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
+        <views:HeaderView Title="Tickets" Grid.Row="0" />
 
-    </VerticalStackLayout>
+        <ScrollView Grid.Row="1">
+        <VerticalStackLayout>
+            <Border
+                StrokeThickness="1"
+                Margin="20"
+                Padding="15">
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Image
+                            Source="day_ticket_solid_green.png"
+                            HeightRequest="50" />
+                        <Label
+                            FontSize="24"
+                            TextColor="{StaticResource Primary}"
+                            VerticalOptions="Center"
+                            Margin="20"
+                            FontAttributes="Bold">Dagtickets</Label>
+                    </HorizontalStackLayout>
+                    <BoxView 
+                        HeightRequest="3"
+                        Color="#58A518"/>
+                    <VerticalStackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <HorizontalStackLayout Grid.Column="0">
+                                <Image
+                                    Source="user_solid_black.png" 
+                                    WidthRequest="20"/>
+                                <Label
+                                    Margin="15"
+                                    VerticalOptions="Center" >Standaard</Label>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Column="1">
+                                <Button 
+                                    x:Name="DayTicketsStandardMinus"
+                                    Style="{StaticResource PlusMinusButtonStyle}"
+                                    Text="-"
+                                    Clicked="DayTicketsStandard_Clicked"></Button>
+                                <Entry
+                                    x:Name="DayTicketsStandardEntry"
+                                    Text="0"
+                                    FontSize="24"
+                                    VerticalTextAlignment="Center" 
+                                    HorizontalTextAlignment="Center"></Entry>
+                                <Button 
+                                    Style="{StaticResource PlusMinusButtonStyle}"
+                                    Text="+"
+                                    Clicked="DayTicketsStandard_Clicked"></Button>
+                            </HorizontalStackLayout>
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <HorizontalStackLayout Grid.Column="0">
+                                <Image
+                                    Source="crown_solid_black.png" 
+                                    WidthRequest="20"/>
+                                <Label
+                                    Margin="15"
+                                    VerticalOptions="Center" >VIP</Label>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Column="1">
+                                <Button 
+                                    Style="{StaticResource PlusMinusButtonStyle}"
+                                    Text="-"
+                                    Clicked="DayTicketsVIP_Clicked"></Button>
+                                <Entry
+                                    x:Name="DayTicketsVIPEntry"
+                                    Text="0"
+                                    FontSize="24"
+                                    VerticalTextAlignment="Center" 
+                                    HorizontalTextAlignment="Center"></Entry>
+                                <Button 
+                                    Style="{StaticResource PlusMinusButtonStyle}"
+                                    Text="+"
+                                    Clicked="DayTicketsVIP_Clicked"></Button>
+                            </HorizontalStackLayout>
+                        </Grid>
+
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border
+                StrokeThickness="1"
+                Margin="20"
+                Padding="15">
+                <VerticalStackLayout>
+                    
+                    <HorizontalStackLayout>
+                        <Image
+                            Source="combi_ticket_solid_green.png"
+                            HeightRequest="50" />
+                        <Label
+                            FontSize="24"
+                            TextColor="{StaticResource Primary}"
+                            VerticalOptions="Center"
+                            Margin="20"
+                            FontAttributes="Bold">Combitickets</Label>
+                    </HorizontalStackLayout>
+                    <BoxView 
+                        HeightRequest="3"
+                        Color="#58A518"/>
+                    <Entry
+                        Placeholder="Aantal dagen"
+                        x:Name="DaysEntry">
+                    </Entry>
+                    <BoxView 
+                        HeightRequest="3"
+                        Color="#58A518"/>
+                    <VerticalStackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <HorizontalStackLayout Grid.Column="0">
+                                <Image
+                                    Source="user_solid_black.png" 
+                                    WidthRequest="20"/>
+                                <Label
+                                    Margin="15"
+                                    VerticalOptions="Center" >Standaard</Label>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Column="1">
+                                <Button 
+                                    x:Name="CombiTicketsStandardMinus"
+                                    Style="{StaticResource PlusMinusButtonStyle}"
+                                    Text="-"
+                                    Clicked="CombiTicketsStandard_Clicked"></Button>
+                                <Entry
+                                    x:Name="CombiTicketsStandardEntry"
+                                    Text="0"
+                                    FontSize="24"
+                                    VerticalTextAlignment="Center" 
+                                    HorizontalTextAlignment="Center"></Entry>
+                                <Button 
+                                    Style="{StaticResource PlusMinusButtonStyle}"
+                                    Text="+"
+                                    Clicked="CombiTicketsStandard_Clicked"></Button>
+                            </HorizontalStackLayout>
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <HorizontalStackLayout Grid.Column="0">
+                                <Image
+                                    Source="crown_solid_black.png" 
+                                    WidthRequest="20"/>
+                                <Label
+                                    Margin="15"
+                                    VerticalOptions="Center" >VIP</Label>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Column="1">
+                                <Button 
+                                    Style="{StaticResource PlusMinusButtonStyle}"
+                                    Text="-"
+                                    Clicked="CombiTicketsVIP_Clicked"></Button>
+                                <Entry
+                                    x:Name="CombiTicketsVIPEntry"
+                                    Text="0"
+                                    FontSize="24"
+                                    VerticalTextAlignment="Center" 
+                                    HorizontalTextAlignment="Center"></Entry>
+                                <Button 
+                                    Style="{StaticResource PlusMinusButtonStyle}"
+                                    Text="+"
+                                    Clicked="CombiTicketsVIP_Clicked"></Button>
+                            </HorizontalStackLayout>
+                        </Grid>
+
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border
+                StrokeThickness="1"
+                Margin="20"
+                Padding="15">
+                    <Editor
+Placeholder="Opmerkingen"
+MinimumHeightRequest="50"
+MaximumHeightRequest="200">
+                    </Editor>
+            </Border>
+        </VerticalStackLayout>
+        </ScrollView>
+        <Button 
+            Grid.Row="2"
+            mi:MauiIcon.Value="{mi:FontAwesomeSolid Icon=CartShopping}"
+            Style="{StaticResource NavigationButtonStyle}"
+            Text="Bestellen"
+            x:Name="OrderButton"
+            Clicked="OrderButton_Clicked"
+            Margin="0,50,0,10"></Button>
+    </Grid>
 </ContentPage>

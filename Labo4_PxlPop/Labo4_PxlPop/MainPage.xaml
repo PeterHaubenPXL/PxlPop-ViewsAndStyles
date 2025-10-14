@@ -22,68 +22,61 @@
                     Source="pxl_icon.png"
                     Aspect="AspectFit" 
                     HeightRequest="340" 
-                    HorizontalOptions="Center"
-                    Shadow="green 5 5"/>
-            <Border Stroke="LightGray" StrokeShape="RoundRectangle 12">
+                    HorizontalOptions="Center">
+                <Image.Shadow>
+                    <Shadow 
+                        Brush="{StaticResource Primary}"
+                        Offset="10,10"/>
+                </Image.Shadow>
+            </Image>
+            <Button 
+                mi:MauiIcon.Value="{mi:FontAwesomeSolid Icon=Music}"
+                Style="{StaticResource NavigationButtonStyle}"
+                Text="Line-up"
+                x:Name="lineUpButton"
+                Clicked="lineUpButton_Clicked"
+                Margin="0,50,0,10"></Button>
+            <Button 
+                mi:MauiIcon.Value="{mi:FontAwesomeSolid Icon=CircleInfo}"
+                Style="{StaticResource NavigationButtonStyle}"
+                Text="Info"
+                WidthRequest="340"
+                x:Name="infoButton"
+                Clicked="infoButton_Clicked"></Button>
+            <Button 
+                mi:MauiIcon.Value="{mi:FontAwesomeSolid Icon=Heart}"
+                Style="{StaticResource NavigationButtonStyle}"
+                Text="Favourites"
+                x:Name="favoriteButton"
+                Clicked="favoriteButton_Clicked"></Button>
+            <Button 
+                mi:MauiIcon.Value="{mi:FontAwesomeSolid Icon=Ticket}"
+                Style="{StaticResource NavigationButtonStyle}"
+                Text="Tickets"
+                x:Name="ticketsButton"
+                Clicked="ticketsButton_Clicked"></Button>
+            <Button 
+                mi:MauiIcon.Value="{mi:FontAwesomeSolid Icon=User}"
+                Style="{StaticResource NavigationButtonStyle}"
+                Text="Account"
+                x:Name="accountButton"
+                Clicked="accountButton_Clicked"></Button>
+    
+            
+            
+            <!--<Border>
                 <Button 
-                    x:Name="lineUpButton"
-                    Text="Line-up "
-                    ImageSource="music_solid_white.svg"
-                    ContentLayout="Left,50"
-                    Margin="0,35,0,10"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    WidthRequest="340" 
-                    Clicked="lineUpButton_Clicked"/>
-            </Border>
-            <Border>
-                <Button 
-                    x:Name="infoButton"
-                    Text="Info     "
-                    ImageSource="circle_info_solid_white.svg"
-                    ContentLayout="Left,75"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    WidthRequest="340"
-                    Clicked="infoButton_Clicked">
-                </Button>
-            </Border>
-            <Border>
-                <Button 
-                    x:Name="favoriteButton"
-                    Text="    Favorieten"
-                    ImageSource="heart_solid_white.svg"
-                    ContentLayout="Left,5"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    WidthRequest="340"
-                    Clicked="favoriteButton_Clicked">
-                </Button>
-            </Border>
-            <Border>
-                <Button 
-                    x:Name="ticketsButton"
-                    Text="Tickets  "
-                    ImageSource="ticket_solid_white.svg"
-                    ContentLayout="Left,50"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    WidthRequest="340"
-                    Clicked="ticketsButton_Clicked">
-                </Button>
-            </Border>
-            <Border>
-                <Button 
-                    x:Name="userButton"
+                    x:Name="accountButton"
                     Text="Account"
                     ImageSource="circle_user_solid_white.svg"
                     ContentLayout="Left,50"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     WidthRequest="340"
-                    Clicked="userButton_Clicked">
+                    Clicked="accountButton_Clicked">
                 </Button>
-            </Border>
+            </Border>-->
+            
         </VerticalStackLayout>
     </ScrollView>
 

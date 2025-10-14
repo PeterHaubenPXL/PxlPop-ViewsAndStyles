@@ -5,13 +5,22 @@
              xmlns:views="clr-namespace:Labo4_PxlPop.Views"
              Title="Favourite page"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout Spacing="0">
-        <views:HeaderView Title="Favourites" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
 
-        <!-- Rest van je page inhoud -->
-        <Label Text="Hier komt je Favourite content" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center"/>
+        <views:HeaderView Title="Favourits" Grid.Row="0" />
 
-    </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="1" Spacing="30">
+            <SearchBar x:Name="mySearchBar"
+                Placeholder="Zoeken..."
+                SearchButtonPressed="OnSearchBarButtonPressed"
+                TextChanged="OnSearchBarTextChanged"
+                Margin="30"/>
+
+            <Label Margin="30,0" x:Name="resultLabel" Text="Hier komt later een CollectionView" />
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

@@ -5,12 +5,43 @@
              xmlns:views="clr-namespace:Labo4_PxlPop.Views"
              Title="Accountpage"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout>
-        <views:HeaderView Title="Account" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-        <!-- Rest van je page inhoud -->
-        <Label Text="Hier komt je Account content" 
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-    </VerticalStackLayout>
+        <views:HeaderView 
+            Title="Account" 
+            Grid.Row="0" 
+            Grid.ColumnSpan="2" />
+        <ScrollView Grid.Row="1" Grid.ColumnSpan="2">
+            <VerticalStackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout>
+                            <Label 
+                            Text="Enable dark mode"
+                            HorizontalOptions="Start"
+                            Margin="30"
+                            FontSize="20"/>
+                            <Switch HorizontalOptions="End"
+                                    Toggled="Switch_Toggled"></Switch>
+                        </HorizontalStackLayout>
+                     
+                    </VerticalStackLayout>
+                </Grid>
+            </VerticalStackLayout>
+
+
+        </ScrollView>
+    </Grid>
 </ContentPage>

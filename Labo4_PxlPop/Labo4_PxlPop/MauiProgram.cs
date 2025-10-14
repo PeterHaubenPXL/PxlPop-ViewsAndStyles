@@ -1,4 +1,5 @@
-﻿using MauiIcons.Material;
+﻿using MauiIcons.FontAwesome.Solid;
+using MauiIcons.Material;
 using Microsoft.Extensions.Logging;
 
 namespace Labo4_PxlPop
@@ -18,7 +19,7 @@ namespace Labo4_PxlPop
                     fonts.AddFont("Arial.ttf", "Arial");
                 })
 
-                .UseMaterialMauiIcons();
+                .UseFontAwesomeSolidMauiIcons();
 
 #if DEBUG
     		builder.Logging.AddDebug();

@@ -9,9 +9,22 @@
         <views:HeaderView Title="Line-up" />
 
         <!-- Rest van je page inhoud -->
-        <Label Text="Hier komt je line-up content" 
-               VerticalOptions="Center" 
-               HorizontalOptions="Center"/>
+        <Picker x:Name="myPicker"
+            Title="Selecteer department"
+            SelectedIndexChanged="Picker_SelectedIndexChanged"
+            Margin="30">
+            <Picker.Items>
+                <x:String>Businesss</x:String>
+                <x:String>Education</x:String>
+                <x:String>Healthcare</x:String>
+                <x:String>Digital</x:String>
+                <x:String>Media &amp; Tourism</x:String>
+                <x:String>People &amp; Society</x:String>
+                <x:String>Green &amp; Tech</x:String>
+                <x:String>Music</x:String>
+                <x:String>MAD</x:String>
+            </Picker.Items>
+        </Picker>
 
     </VerticalStackLayout>
 </ContentPage>
